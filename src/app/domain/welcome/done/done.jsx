@@ -37,7 +37,7 @@ export default function Done() {
   }, [done]);
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex h-screen justify-center items-center">
       {!done && (
         <div>
           <h1 className="text-4xl font-bold">Please Wait...</h1>
