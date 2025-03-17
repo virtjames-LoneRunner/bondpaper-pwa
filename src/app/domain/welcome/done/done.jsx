@@ -36,5 +36,13 @@ export default function Done() {
     }
   }, [done]);
 
-  return <div>{!done && <div>Please wait</div>}</div>;
+  return (
+    <div className="flex justify-center items-center">
+      {!done && (
+        <div>
+          <h1 className="text-4xl font-bold">Please Wait...</h1>
+        </div>
+      )}
+    </div>
+  );
 }

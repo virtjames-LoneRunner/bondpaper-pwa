@@ -37,12 +37,17 @@ export default function Start() {
         <h1 className="text-2xl">Insert Coins</h1>
       </div>
       <div>
+        <h1 className="text-2xl">Paper: {buyData?.paper}</h1>
+        <h1 className="text-2xl">Quantity: {buyData?.quantity}</h1>
+      </div>
+      <div>
         <h1 className="text-[8em] font-semibold">
           <FormattedCurrency amount={amount} />
         </h1>
       </div>
       <div>
         <Button
+          disabled={buyData?.quantity > amount}
           onClick={() => {
             navigate(`/system/done`);
           }}
