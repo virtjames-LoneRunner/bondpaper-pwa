@@ -5,11 +5,6 @@ export default function System() {
   const [activeMenu, setActiveMenu] = useState();
   const navigationItems = [
     {
-      path: "start",
-      label: "Start",
-      icon: null,
-    },
-    {
       path: "paper",
       label: "Paper",
       icon: null,
@@ -17,6 +12,11 @@ export default function System() {
     {
       path: "quantity",
       label: "Quantity",
+      icon: null,
+    },
+    {
+      path: "pay",
+      label: "Pay Amount",
       icon: null,
     },
     {
@@ -50,10 +50,10 @@ export default function System() {
         ))}
       </div>
       <div className="p-10 flex-1 flex justify-between flex-col">
-        <div>
+        <div className="flex justify-center items-center">
           <Outlet />
         </div>
-        <div className="flex justify-end">
+        {/* <div className="flex justify-end">
           <div className="flex space-x-5">
             <button className="bg-blue-500 text-white px-14 py-4 w-full rounded-md">
               Cancel
@@ -62,7 +62,7 @@ export default function System() {
               Next
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -6,20 +6,25 @@ import Start from "./domain/welcome/start/start";
 import Paper from "./domain/welcome/paper/paper";
 import Quantity from "./domain/welcome/quantity/quantity";
 import Done from "./domain/welcome/done/done";
+import { MainProvider } from "./domain/welcome/main.context";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainShell />,
+    element: (
+      <MainProvider>
+        <MainShell />
+      </MainProvider>
+    ),
     children: [
       { path: "", element: <Welcome /> },
       {
         path: "system",
         element: <System />,
         children: [
-          { path: "start", element: <Start /> },
           { path: "paper", element: <Paper /> },
           { path: "quantity", element: <Quantity /> },
+          { path: "pay", element: <Start /> },
           { path: "done", element: <Done /> },
         ],
       },

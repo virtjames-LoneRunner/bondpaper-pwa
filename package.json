@@ -4,8 +4,10 @@
   "private": true,
   "dependencies": {
     "@tanstack/react-query": "^5.66.0",
-    "axios": "^1.7.9",
+    "axios": "^1.8.3",
     "cra-template-pwa": "2.0.0",
+    "primeicons": "^7.0.0",
+    "primereact": "^10.9.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.1.5",

@@ -10,7 +10,7 @@ export default function Welcome() {
         <h1>Paper Vending Machine</h1>
         <button
           className="bg-blue-500 text-white px-4 py-2 w-full rounded-md"
-          onClick={() => navigate("system")}
+          onClick={() => navigate("system/paper")}
         >
           Get Started
         </button>
