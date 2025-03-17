@@ -37,7 +37,9 @@ export default function Start() {
         <h1 className="text-2xl">Insert Coins</h1>
       </div>
       <div>
-        <h1 className="text-2xl">Paper: {buyData?.paper}</h1>
+        <h1 className="text-2xl">
+          Paper: {buyData?.paper === "A4" ? "Short" : buyData?.paper}
+        </h1>
         <h1 className="text-2xl">Quantity: {buyData?.quantity}</h1>
       </div>
       <div>

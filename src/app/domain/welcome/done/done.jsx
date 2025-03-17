@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useMainContext } from "../main.context";
 import axios from "axios";
 import { BASE_URL } from "../../../shared/config";
+import { Button } from "primereact/button";
 
 export default function Done() {
   const { buyData, setBuyData, navigate } = useMainContext();
@@ -22,14 +23,6 @@ export default function Done() {
   };
 
   useEffect(() => {
-    if (dataSent) {
-      return;
-    }
-    handleSendBuyData();
-    setDataSent(true);
-  });
-
-  useEffect(() => {
     if (done) {
       setBuyData({ paper: "", quantity: 0 });
       navigate(`/system/paper`);
@@ -37,12 +30,20 @@ export default function Done() {
   }, [done]);
 
   return (
-    <div className="flex h-screen justify-center items-center">
-      {!done && (
+    <div className="flex justify-center items-center h-screen">
+      {!dataSent && (
         <div>
-          <h1 className="text-4xl font-bold">Please Wait...</h1>
+          <Button
+            onClick={() => {
+              handleSendBuyData();
+            }}
+            className="bg-blue-600 text-white font-bold px-5 py-5 text-4xl rounded-md"
+          >
+            Done
+          </Button>
         </div>
       )}
+      {dataSent && <h1 className="text-4xl font-bold">Please Wait...</h1>}
     </div>
   );
 }
