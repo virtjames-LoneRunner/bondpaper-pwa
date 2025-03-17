@@ -36,6 +36,7 @@ export default function Done() {
           <Button
             onClick={() => {
               handleSendBuyData();
+              setDataSent(true);
             }}
             className="bg-blue-600 text-white font-bold px-5 py-5 text-4xl rounded-md"
           >
