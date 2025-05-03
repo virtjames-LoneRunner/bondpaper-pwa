@@ -22,7 +22,7 @@ export default function Start() {
   };
 
   useEffect(() => {
-    const intervalId = setInterval(handleGetCoinCount, 1000);
+    const intervalId = setInterval(handleGetCoinCount, 500);
 
     return () => {
       if (intervalId) {
